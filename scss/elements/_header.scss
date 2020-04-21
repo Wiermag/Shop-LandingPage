@@ -1,0 +1,117 @@
+.header {
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 .3rem .6rem 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  height: 7rem;
+  justify-content: flex-start;
+  position: relative;
+  border-radius: 0 0 20px 20px ;
+
+  .hamburger-container{
+    position: absolute;
+    right: 2%;
+    .hamburger {
+      position: relative;
+      width: 3rem;
+      height: 3rem;
+      border: none;
+      background: linear-gradient(to bottom, $var2, $var2) no-repeat center;
+      background-size: 100% 20%;
+      transition: background-size 0.3s ease-in-out;
+      cursor: pointer;
+      outline: none;
+
+      &:before,
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background-color: $var2;
+        transition: transform 0.3s ease-in-out;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      &.active {
+        background-size: 0 0;
+        &:before {
+          transform: translateY(200%) rotate(45deg);
+        }
+        &:after {
+          transform: translateY(-200%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .header-logo {
+    color: $var2;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 300;
+    padding-left: 2rem;
+    text-decoration: none;
+  }
+
+  .header-menu {
+    bottom: -8.8rem;
+    box-shadow: 0 .3rem .6rem 0 rgba(0, 0, 0, 0.16);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    li {
+      padding: 0 2rem;
+      a {
+        text-decoration: none;
+        color: $var3;
+        &:hover {
+          color: $var2;
+        }
+      }
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .header {
+    position: fixed;
+    display: flex;
+    width: 84vw;
+    .hamburger-container {
+      display: none;
+    }
+    .header-menu {
+      display: block;
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      bottom: 30%;
+      left: 70%;
+      .header-menu-list {
+        display: flex;
+        li {
+          &:hover:after{
+            content: '';
+            display: block;
+            border: 2px solid $var2;
+            height: 0.3rem;
+            width: 100%;
+            background-color: $var2;
+            transform: translateY(2.6rem);
+          }
+        }
+      }
+    }
+  }
+}

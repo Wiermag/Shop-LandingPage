@@ -1,0 +1,82 @@
+@mixin button-price($color) {
+  display: block;
+  max-width: 50%;
+  padding: 1.5rem 6rem;
+  margin: 0 auto;
+  transform: translateY(-75%);
+  font-size: 1.6rem;
+  text-align: center;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  color: white;
+  background-color: $color;
+}
+
+@mixin price-details-box($color) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  border: 1px solid $color;
+  border-radius: 18px;
+  .price-cost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    p {
+      font-size: 4.5rem;
+      color: $color;
+      font-weight: 300;
+    }
+    h5 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  }
+  .price-elements {
+    span.far {
+      margin-right: 1rem;
+      color:$var2;
+    }
+    span.close {
+      display: inline-block;
+      height: 1.4rem;
+      width: 1.4rem;
+      margin-right: 1rem;
+      background-image: url("../assets/Close.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color:$var4;
+    }
+    p {
+      font-size: 1.4rem;
+      color: black;
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+@mixin element($background-color) {
+  content: "";
+  position: relative;
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background-color: $background-color;
+  bottom: -50px;
+  left: -25px;
+  z-index: -1;
+}
+
+
+

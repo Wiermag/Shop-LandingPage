@@ -1,0 +1,98 @@
+.price-section {
+  width: 100%;
+  padding: 2rem;
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .price-box:first-of-type {
+    .price-details {
+      @include price-details-box($var4)
+    }
+    a {
+      @include button-price($var4);
+    }
+  }
+  .price-box:nth-of-type(2) {
+    .price-details {
+      @include price-details-box($var2);
+      width: 100%;
+      box-shadow: 0 0 20px 3px rgba(26, 152, 234, 0.2);
+    }
+    a {
+      @include button-price($var2);
+      box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+    }
+  }
+  .price-details:last-of-type {
+    @include price-details-box($var5)
+  }
+  a {
+    @include button-price($var5);
+  }
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+  .price-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    .price-box{
+      width: 45vw;
+      padding: 2rem;
+    }
+    .price-box:nth-of-type(2){
+      order: -1;
+      width: 60vw;
+    }
+    .price-box:last-of-type{
+      .price-elements {
+        padding: .2rem 0;
+      }
+    }
+  }
+};
+
+@media (min-width: 1000px) {
+  .price-section{
+    h2 {
+      margin: 4rem;
+    }
+    .price-container {
+      display: flex;
+      justify-content: space-around;
+      .price-box {
+        width: 30%;
+        .price-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          height: 90%;
+          margin-top: 5%;
+          .price-cost {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+          }
+          .price-elements {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+          }
+        }
+      }
+      .price-box:nth-of-type(2) {
+        .price-details {
+          height: 100%;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
