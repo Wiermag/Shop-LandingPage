@@ -1,0 +1,1359 @@
+/* line 3, scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 24, scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 28, scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 31, scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 34, scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 37, scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 42, scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, scss/settings/_basic.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, scss/settings/_basic.scss */
+html {
+  font-size: 10px;
+}
+
+/* line 9, scss/settings/_basic.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* line 13, scss/settings/_basic.scss */
+body .site-container {
+  width: 100%;
+}
+
+@media (min-width: 1352px) {
+  /* line 17, scss/settings/_basic.scss */
+  body .site-container {
+    max-width: 1352px;
+    margin: 0 auto;
+    border: .1rem solid #dddddd;
+  }
+}
+
+/* line 25, scss/settings/_basic.scss */
+.hidden {
+  display: none;
+}
+
+/* line 1, scss/elements/_header.scss */
+.header {
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.16);
+  display: flex;
+  height: 7rem;
+  justify-content: flex-start;
+  position: relative;
+  border-radius: 0 0 20px 20px;
+}
+
+/* line 11, scss/elements/_header.scss */
+.header .hamburger-container {
+  position: absolute;
+  right: 2%;
+}
+
+/* line 14, scss/elements/_header.scss */
+.header .hamburger-container .hamburger {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: linear-gradient(to bottom, #08A6E4, #08A6E4) no-repeat center;
+  background-size: 100% 20%;
+  transition: background-size 0.3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+
+/* line 25, scss/elements/_header.scss */
+.header .hamburger-container .hamburger:before, .header .hamburger-container .hamburger:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #08A6E4;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* line 36, scss/elements/_header.scss */
+.header .hamburger-container .hamburger:before {
+  top: 0;
+}
+
+/* line 39, scss/elements/_header.scss */
+.header .hamburger-container .hamburger:after {
+  bottom: 0;
+}
+
+/* line 42, scss/elements/_header.scss */
+.header .hamburger-container .hamburger.active {
+  background-size: 0 0;
+}
+
+/* line 44, scss/elements/_header.scss */
+.header .hamburger-container .hamburger.active:before {
+  transform: translateY(200%) rotate(45deg);
+}
+
+/* line 47, scss/elements/_header.scss */
+.header .hamburger-container .hamburger.active:after {
+  transform: translateY(-200%) rotate(-45deg);
+}
+
+/* line 54, scss/elements/_header.scss */
+.header .header-logo {
+  color: #08A6E4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  padding-left: 2rem;
+  text-decoration: none;
+}
+
+/* line 63, scss/elements/_header.scss */
+.header .header-menu {
+  bottom: -8.8rem;
+  box-shadow: 0 0.3rem 0.6rem 0 rgba(0, 0, 0, 0.16);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* line 72, scss/elements/_header.scss */
+.header .header-menu li {
+  padding: 0 2rem;
+}
+
+/* line 74, scss/elements/_header.scss */
+.header .header-menu li a {
+  text-decoration: none;
+  color: #A5A5A5;
+}
+
+/* line 77, scss/elements/_header.scss */
+.header .header-menu li a:hover {
+  color: #08A6E4;
+}
+
+/* line 84, scss/elements/_header.scss */
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  /* line 89, scss/elements/_header.scss */
+  .header {
+    position: fixed;
+    display: flex;
+    width: 84vw;
+  }
+  /* line 93, scss/elements/_header.scss */
+  .header .hamburger-container {
+    display: none;
+  }
+  /* line 96, scss/elements/_header.scss */
+  .header .header-menu {
+    display: block;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    bottom: 30%;
+    left: 70%;
+  }
+  /* line 101, scss/elements/_header.scss */
+  .header .header-menu .header-menu-list {
+    display: flex;
+  }
+  /* line 104, scss/elements/_header.scss */
+  .header .header-menu .header-menu-list li:hover:after {
+    content: '';
+    display: block;
+    border: 2px solid #08A6E4;
+    height: 0.3rem;
+    width: 100%;
+    background-color: #08A6E4;
+    transform: translateY(2.6rem);
+  }
+}
+
+/* line 1, scss/elements/_banner.scss */
+.banner {
+  width: 100%;
+  height: 100vh;
+}
+
+/* line 4, scss/elements/_banner.scss */
+.banner .banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 10, scss/elements/_banner.scss */
+.banner .banner-container h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 10.5rem;
+}
+
+/* line 16, scss/elements/_banner.scss */
+.banner .banner-container p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin: 2.5rem 3.5rem;
+  text-align: center;
+}
+
+/* line 22, scss/elements/_banner.scss */
+.banner .banner-container a {
+  background-color: rgba(8, 166, 228, 0.4);
+  border: none;
+  border-radius: 4rem;
+  color: white;
+  font-size: 1.6rem;
+  padding: 2rem 9rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+  cursor: pointer;
+}
+
+/* line 35, scss/elements/_banner.scss */
+.banner .banner-img {
+  background-image: url("../assets/Background.png");
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  width: 100%;
+}
+
+/* line 1, scss/elements/_first-section.scss */
+.first-article {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  z-index: 1;
+}
+
+/* line 10, scss/elements/_first-section.scss */
+.first-article h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* line 16, scss/elements/_first-section.scss */
+.first-article li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* line 22, scss/elements/_first-section.scss */
+.first-article li h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* line 30, scss/elements/_first-section.scss */
+.first-article li p {
+  color: #A5A5A5;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+/* line 37, scss/elements/_first-section.scss */
+.first-article li:first-child::before {
+  content: "";
+  position: relative;
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background-color: #FB3B64;
+  bottom: -50px;
+  left: -25px;
+  z-index: -1;
+}
+
+/* line 40, scss/elements/_first-section.scss */
+.first-article li:nth-child(2)::before {
+  content: "";
+  position: relative;
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background-color: #08A6E4;
+  bottom: -50px;
+  left: -25px;
+  z-index: -1;
+  top: 40px;
+}
+
+/* line 44, scss/elements/_first-section.scss */
+.first-article li:last-child::before {
+  content: "";
+  position: relative;
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  background-color: #55DFB4;
+  bottom: -50px;
+  left: -25px;
+  z-index: -1;
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+  /* line 51, scss/elements/_first-section.scss */
+  .first-article {
+    padding: 3rem 1.5rem;
+  }
+  /* line 53, scss/elements/_first-section.scss */
+  .first-article .first-article-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  /* line 59, scss/elements/_first-section.scss */
+  .first-article li {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* line 66, scss/elements/_first-section.scss */
+  .first-article {
+    padding: 3rem 1.5rem;
+  }
+  /* line 68, scss/elements/_first-section.scss */
+  .first-article .first-article-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* line 1, scss/elements/_second-section.scss */
+.second-article {
+  width: 100%;
+  background-color: #F7F7F7;
+  padding: 3rem;
+}
+
+/* line 5, scss/elements/_second-section.scss */
+.second-article-box {
+  border-radius: 20px;
+  background-color: white;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  border-radius: 20px;
+}
+
+/* line 15, scss/elements/_second-section.scss */
+.second-article-box .box-img-computer {
+  margin: 0 auto;
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+}
+
+/* line 20, scss/elements/_second-section.scss */
+.second-article-box .box-img-computer #computer {
+  width: 125%;
+  margin: 50% 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 25, scss/elements/_second-section.scss */
+.second-article-box .box-img-computer .box-image {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 4.1rem;
+  background-color: #FB3B64;
+  position: absolute;
+  top: -5%;
+  right: -15%;
+  transform: rotate(45deg);
+}
+
+/* line 36, scss/elements/_second-section.scss */
+.second-article-box .box-img-telephone {
+  border-radius: 50%;
+  height: 25vh;
+  width: 25vh;
+  background-color: #08A6E4;
+  margin: 2rem 0;
+}
+
+/* line 42, scss/elements/_second-section.scss */
+.second-article-box .box-img-telephone #telephone {
+  height: 25vh;
+  width: auto;
+  margin-top: 1rem;
+}
+
+/* line 48, scss/elements/_second-section.scss */
+.second-article-box #megaphone {
+  background-color: #55DFB4;
+  background-image: url("../assets/Trumpet.png");
+  background-size: 50%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border-radius: .5rem;
+  height: 30vh;
+  width: 100%;
+}
+
+/* line 59, scss/elements/_second-section.scss */
+.second-article-box .box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* line 64, scss/elements/_second-section.scss */
+.second-article-box .box-text h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+/* line 70, scss/elements/_second-section.scss */
+.second-article-box .box-text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+/* line 76, scss/elements/_second-section.scss */
+.second-article-box:first-of-type {
+  padding-top: 5rem;
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+  /* line 83, scss/elements/_second-section.scss */
+  .second-article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* line 88, scss/elements/_second-section.scss */
+  .second-article-box {
+    width: 40vw;
+  }
+  /* line 90, scss/elements/_second-section.scss */
+  .second-article-box:last-of-type {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 100vh;
+  }
+  /* line 96, scss/elements/_second-section.scss */
+  .second-article-box:last-of-type .box-text {
+    background-color: white;
+    width: 55%;
+    height: 100%;
+    border-radius: .6rem;
+  }
+  /* line 102, scss/elements/_second-section.scss */
+  .second-article-box:last-of-type #megaphone {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* line 111, scss/elements/_second-section.scss */
+  .second-article {
+    padding: 5rem;
+  }
+  /* line 113, scss/elements/_second-section.scss */
+  .second-article-box {
+    margin: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+  }
+  /* line 120, scss/elements/_second-section.scss */
+  .second-article-box .box-text {
+    width: 50%;
+    padding: 2rem;
+  }
+  /* line 123, scss/elements/_second-section.scss */
+  .second-article-box .box-text .box-line {
+    height: .4rem;
+    width: 70%;
+    background-color: #FB3B64;
+    margin: 2rem;
+  }
+  /* line 130, scss/elements/_second-section.scss */
+  .second-article-box:first-of-type {
+    flex-direction: row-reverse;
+    padding: 2rem;
+  }
+  /* line 133, scss/elements/_second-section.scss */
+  .second-article-box:first-of-type .box-img-computer {
+    margin-top: 2rem;
+  }
+  /* line 138, scss/elements/_second-section.scss */
+  .second-article-box:nth-of-type(2) .box-line {
+    background-color: #08A6E4;
+  }
+  /* line 142, scss/elements/_second-section.scss */
+  .second-article-box:last-of-type {
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  /* line 147, scss/elements/_second-section.scss */
+  .second-article-box:last-of-type .box-text {
+    background-color: white;
+    width: 55%;
+    border-radius: .6rem;
+    padding: 2rem;
+  }
+  /* line 152, scss/elements/_second-section.scss */
+  .second-article-box:last-of-type .box-text .box-line {
+    background-color: #55DFB4;
+  }
+  /* line 157, scss/elements/_second-section.scss */
+  .second-article-box:last-of-type #megaphone {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+/* line 1, scss/elements/_price-section.scss */
+.price-section {
+  width: 100%;
+  padding: 2rem;
+}
+
+/* line 4, scss/elements/_price-section.scss */
+.price-section h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+/* line 10, scss/elements/_price-section.scss */
+.price-section .price-box:first-of-type .price-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  border: 1px solid #FB3B64;
+  border-radius: 18px;
+}
+
+/* line 25, scss/settings/_mixins.scss */
+.price-section .price-box:first-of-type .price-details .price-cost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 30, scss/settings/_mixins.scss */
+.price-section .price-box:first-of-type .price-details .price-cost h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+/* line 35, scss/settings/_mixins.scss */
+.price-section .price-box:first-of-type .price-details .price-cost p {
+  font-size: 4.5rem;
+  color: #FB3B64;
+  font-weight: 300;
+}
+
+/* line 40, scss/settings/_mixins.scss */
+.price-section .price-box:first-of-type .price-details .price-cost h5 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* line 47, scss/settings/_mixins.scss */
+.price-section .price-box:first-of-type .price-details .price-elements span.far {
+  margin-right: 1rem;
+  color: #08A6E4;
+}
+
+/* line 51, scss/settings/_mixins.scss */
+.price-section .price-box:first-of-type .price-details .price-elements span.close {
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  margin-right: 1rem;
+  background-image: url("../assets/Close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FB3B64;
+}
+
+/* line 61, scss/settings/_mixins.scss */
+.price-section .price-box:first-of-type .price-details .price-elements p {
+  font-size: 1.4rem;
+  color: black;
+  margin: 1.5rem 0;
+}
+
+/* line 13, scss/elements/_price-section.scss */
+.price-section .price-box:first-of-type a {
+  display: block;
+  max-width: 50%;
+  padding: 1.5rem 6rem;
+  margin: 0 auto;
+  transform: translateY(-75%);
+  font-size: 1.6rem;
+  text-align: center;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  color: white;
+  background-color: #FB3B64;
+}
+
+/* line 18, scss/elements/_price-section.scss */
+.price-section .price-box:nth-of-type(2) .price-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  border: 1px solid #08A6E4;
+  border-radius: 18px;
+  width: 100%;
+  box-shadow: 0 0 20px 3px rgba(26, 152, 234, 0.2);
+}
+
+/* line 25, scss/settings/_mixins.scss */
+.price-section .price-box:nth-of-type(2) .price-details .price-cost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 30, scss/settings/_mixins.scss */
+.price-section .price-box:nth-of-type(2) .price-details .price-cost h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+/* line 35, scss/settings/_mixins.scss */
+.price-section .price-box:nth-of-type(2) .price-details .price-cost p {
+  font-size: 4.5rem;
+  color: #08A6E4;
+  font-weight: 300;
+}
+
+/* line 40, scss/settings/_mixins.scss */
+.price-section .price-box:nth-of-type(2) .price-details .price-cost h5 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* line 47, scss/settings/_mixins.scss */
+.price-section .price-box:nth-of-type(2) .price-details .price-elements span.far {
+  margin-right: 1rem;
+  color: #08A6E4;
+}
+
+/* line 51, scss/settings/_mixins.scss */
+.price-section .price-box:nth-of-type(2) .price-details .price-elements span.close {
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  margin-right: 1rem;
+  background-image: url("../assets/Close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FB3B64;
+}
+
+/* line 61, scss/settings/_mixins.scss */
+.price-section .price-box:nth-of-type(2) .price-details .price-elements p {
+  font-size: 1.4rem;
+  color: black;
+  margin: 1.5rem 0;
+}
+
+/* line 23, scss/elements/_price-section.scss */
+.price-section .price-box:nth-of-type(2) a {
+  display: block;
+  max-width: 50%;
+  padding: 1.5rem 6rem;
+  margin: 0 auto;
+  transform: translateY(-75%);
+  font-size: 1.6rem;
+  text-align: center;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+}
+
+/* line 28, scss/elements/_price-section.scss */
+.price-section .price-details:last-of-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  border: 1px solid #55DFB4;
+  border-radius: 18px;
+}
+
+/* line 25, scss/settings/_mixins.scss */
+.price-section .price-details:last-of-type .price-cost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 30, scss/settings/_mixins.scss */
+.price-section .price-details:last-of-type .price-cost h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+/* line 35, scss/settings/_mixins.scss */
+.price-section .price-details:last-of-type .price-cost p {
+  font-size: 4.5rem;
+  color: #55DFB4;
+  font-weight: 300;
+}
+
+/* line 40, scss/settings/_mixins.scss */
+.price-section .price-details:last-of-type .price-cost h5 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* line 47, scss/settings/_mixins.scss */
+.price-section .price-details:last-of-type .price-elements span.far {
+  margin-right: 1rem;
+  color: #08A6E4;
+}
+
+/* line 51, scss/settings/_mixins.scss */
+.price-section .price-details:last-of-type .price-elements span.close {
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  margin-right: 1rem;
+  background-image: url("../assets/Close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FB3B64;
+}
+
+/* line 61, scss/settings/_mixins.scss */
+.price-section .price-details:last-of-type .price-elements p {
+  font-size: 1.4rem;
+  color: black;
+  margin: 1.5rem 0;
+}
+
+/* line 31, scss/elements/_price-section.scss */
+.price-section a {
+  display: block;
+  max-width: 50%;
+  padding: 1.5rem 6rem;
+  margin: 0 auto;
+  transform: translateY(-75%);
+  font-size: 1.6rem;
+  text-align: center;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  color: white;
+  background-color: #55DFB4;
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+  /* line 37, scss/elements/_price-section.scss */
+  .price-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  /* line 42, scss/elements/_price-section.scss */
+  .price-container .price-box {
+    width: 45vw;
+    padding: 2rem;
+  }
+  /* line 46, scss/elements/_price-section.scss */
+  .price-container .price-box:nth-of-type(2) {
+    order: -1;
+    width: 60vw;
+  }
+  /* line 51, scss/elements/_price-section.scss */
+  .price-container .price-box:last-of-type .price-elements {
+    padding: .2rem 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* line 60, scss/elements/_price-section.scss */
+  .price-section h2 {
+    margin: 4rem;
+  }
+  /* line 63, scss/elements/_price-section.scss */
+  .price-section .price-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  /* line 66, scss/elements/_price-section.scss */
+  .price-section .price-container .price-box {
+    width: 30%;
+  }
+  /* line 68, scss/elements/_price-section.scss */
+  .price-section .price-container .price-box .price-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90%;
+    margin-top: 5%;
+  }
+  /* line 75, scss/elements/_price-section.scss */
+  .price-section .price-container .price-box .price-details .price-cost {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* line 82, scss/elements/_price-section.scss */
+  .price-section .price-container .price-box .price-details .price-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* line 91, scss/elements/_price-section.scss */
+  .price-section .price-container .price-box:nth-of-type(2) .price-details {
+    height: 100%;
+    margin-top: 0;
+  }
+}
+
+/* line 1, scss/elements/_calculator-section.scss */
+.calculator {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  /* line 6, scss/elements/_calculator-section.scss */
+  .calculator-section {
+    display: block;
+    margin: 4rem 0;
+    padding: 3rem;
+    background-color: #F7F7F7;
+  }
+  /* line 11, scss/elements/_calculator-section.scss */
+  .calculator-section h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  /* line 17, scss/elements/_calculator-section.scss */
+  .calculator-section .calculator-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 70%;
+  }
+  /* line 25, scss/elements/_calculator-section.scss */
+  .calculator-section .calculator-left-side-select {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* line 32, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product {
+    position: relative;
+    display: inline-block;
+  }
+  /* line 35, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product button {
+    background-color: white;
+    border: 1px solid #08A6E4;
+    padding: 1rem;
+    border-radius: .6rem;
+    width: 95%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    color: #A5A5A5;
+  }
+  /* line 46, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product button:active, .calculator-section .choose-type-product button:focus {
+    box-shadow: inset 0 0 5px 0 #08a6e4;
+  }
+  /* line 49, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product button span {
+    margin-top: .2rem;
+    color: #08A6E4;
+  }
+  /* line 56, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product-list-of-product {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    border: 1px solid #FB3B64;
+    border-radius: .6rem;
+    width: 95%;
+    z-index: 1;
+  }
+  /* line 65, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product-list-of-product i {
+    color: black;
+    font-size: 1.3rem;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  /* line 71, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product-list-of-product i:hover {
+    background-color: #ddd;
+  }
+  /* line 76, scss/elements/_calculator-section.scss */
+  .calculator-section .choose-type-product:hover
+.choose-type-product-list-of-product {
+    display: block;
+  }
+  /* line 81, scss/elements/_calculator-section.scss */
+  input[type=number] {
+    display: block;
+    background-color: white;
+    border: 1px solid #08A6E4;
+    padding: 1rem;
+    border-radius: .6rem;
+    width: 95%;
+    margin: 1rem 0;
+    outline: none;
+  }
+  /* line 90, scss/elements/_calculator-section.scss */
+  input[type=number]:active, input[type=number]:focus {
+    box-shadow: 0 0 5px 0 #08a6e4;
+  }
+  /* line 93, scss/elements/_calculator-section.scss */
+  input[type=number]::placeholder {
+    color: #A5A5A5;
+  }
+  /* line 97, scss/elements/_calculator-section.scss */
+  label {
+    font-size: 1.2rem;
+    color: #95989A;
+  }
+  /* line 101, scss/elements/_calculator-section.scss */
+  input[type=checkbox] {
+    display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    appearance: none;
+    border: 1px solid #95989A;
+    border-radius: 5px;
+    background: white;
+    outline: none;
+  }
+  /* line 111, scss/elements/_calculator-section.scss */
+  input[type=checkbox]:checked::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url("../assets/Checkmark.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1.3rem;
+    width: 1.3rem;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    margin-right: 1rem;
+  }
+  /* line 128, scss/elements/_calculator-section.scss */
+  .calculator-right-side-calc {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  /* line 134, scss/elements/_calculator-section.scss */
+  .calculator-right-side-calc .calc-main-desc {
+    width: 95%;
+    padding: .7rem;
+    background-color: #55DFB4;
+    margin: .5rem 0;
+    border-radius: .6rem;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.3);
+  }
+  /* line 148, scss/elements/_calculator-section.scss */
+  .calculator-right-side-calc .calc-main-desc .calc-sum {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  /* line 154, scss/elements/_calculator-section.scss */
+  .calculator-right-side-calc .sum {
+    width: 50%;
+    background-color: #08A6E4;
+    margin-top: 3rem;
+    border-radius: .6rem;
+    padding: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* line 166, scss/elements/_calculator-section.scss */
+  .calculator-right-side-calc .sum span {
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+}
+
+/* line 1, scss/elements/_form-section.scss */
+.form-section {
+  padding: 3rem;
+  width: 100%;
+}
+
+/* line 5, scss/elements/_form-section.scss */
+.form-section .form-left-side h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  text-align: left;
+}
+
+/* line 10, scss/elements/_form-section.scss */
+.form-section .form-left-side p {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/* line 15, scss/elements/_form-section.scss */
+.form-section .form-left-side .form-left-side-info {
+  margin: 3rem 0;
+}
+
+/* line 17, scss/elements/_form-section.scss */
+.form-section .form-left-side .form-left-side-info span {
+  color: #08A6E4;
+  margin-right: 1rem;
+}
+
+/* line 21, scss/elements/_form-section.scss */
+.form-section .form-left-side .form-left-side-info p {
+  color: #A5A5A5;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* line 30, scss/elements/_form-section.scss */
+.form-section .form-right-side .label {
+  text-transform: uppercase;
+  color: #08A6E4;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* line 36, scss/elements/_form-section.scss */
+.form-section .form-right-side .label input {
+  display: block;
+  margin: 1rem 0;
+  border: transparent;
+  border-bottom: 1px solid #95989A;
+  width: 100%;
+}
+
+/* line 45, scss/elements/_form-section.scss */
+.form-section .form-right-side .assent input {
+  display: inline-block;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid red;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+}
+
+/* line 54, scss/elements/_form-section.scss */
+.form-section .form-right-side .assent input:checked::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url("../assets/Checkmark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1.3rem;
+  width: 1.3rem;
+  transform: translate(-50%, -50%);
+}
+
+/* line 68, scss/elements/_form-section.scss */
+.form-section .form-right-side .assent span {
+  float: right;
+  display: block;
+  text-align: justify;
+  width: calc(100% - 3rem);
+  font-size: 1.2rem;
+  color: #95989A;
+  margin-top: 1rem;
+}
+
+/* line 76, scss/elements/_form-section.scss */
+.form-section .form-right-side .assent span:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+/* line 83, scss/elements/_form-section.scss */
+.form-section .form-right-side input[type='submit'] {
+  display: block;
+  float: right;
+  margin: 2rem 0 5rem 0;
+  padding: 2rem 9rem;
+  font-size: 1.6rem;
+  background-color: #08A6E4;
+  color: white;
+  box-shadow: 0 10px 15px 2px rgba(8, 166, 228, 0.4);
+  cursor: pointer;
+  border: none;
+  border-radius: 4rem;
+}
+
+/* line 96, scss/elements/_form-section.scss */
+.form-section .form-right-side input[type='submit']:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@media (min-width: 720px) and (max-width: 999px) {
+  /* line 106, scss/elements/_form-section.scss */
+  .form-section {
+    margin: 7rem auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  /* line 112, scss/elements/_form-section.scss */
+  .form-section .form-right-side {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* line 118, scss/elements/_form-section.scss */
+  .form-section {
+    margin: 7rem auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  /* line 126, scss/elements/_form-section.scss */
+  .form-section .form-left-side .form-left-side-info {
+    display: flex;
+  }
+  /* line 128, scss/elements/_form-section.scss */
+  .form-section .form-left-side .form-left-side-info p {
+    margin-right: 1.5rem;
+  }
+  /* line 133, scss/elements/_form-section.scss */
+  .form-section .form-right-side {
+    width: 50%;
+  }
+}
+
+/* line 1, scss/elements/_footer.scss */
+footer {
+  background-color: #F7F7F7;
+  width: 100%;
+  display: flex;
+  padding: 1.5rem 2rem;
+  box-shadow: 0px -10px 15px 2px rgba(112, 112, 112, 0.3);
+  border-radius: 20px 20px 0 0;
+}
+
+/* line 8, scss/elements/_footer.scss */
+footer .footer-left {
+  width: 70%;
+}
+
+/* line 10, scss/elements/_footer.scss */
+footer .footer-left a {
+  color: #08A6E4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  padding-left: 2rem;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+/* line 20, scss/elements/_footer.scss */
+footer .footer-left p {
+  font-size: 1.1rem;
+  color: #A5A5A5;
+}
+
+/* line 26, scss/elements/_footer.scss */
+footer .footer-right {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* line 32, scss/elements/_footer.scss */
+footer .footer-right .facebook {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../assets/Facebook.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 1rem;
+}
+
+/* line 42, scss/elements/_footer.scss */
+footer .footer-right .twitter {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../assets/Twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 1rem;
+}
+
+@media (min-width: 1000px) {
+  /* line 56, scss/elements/_footer.scss */
+  .footer-left {
+    margin-left: 5rem;
+  }
+}
