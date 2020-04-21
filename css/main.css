@@ -183,7 +183,7 @@ body .site-container {
 
 /* line 72, scss/elements/_header.scss */
 .header .header-menu li {
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
 }
 
 /* line 74, scss/elements/_header.scss */
