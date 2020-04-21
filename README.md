@@ -1,9 +1,11 @@
 # Shop-LandingPage
 
-Used technologies:
--[x] HTML
--[x] CSS 
--[x] JS 
--[x] RWD
+Based on mapping the layout with Adobe XD.
 
-Click here and view my first page. 
+PROJECT IDEA : 
+The site contains 3 basic elements that present my skills in :
+- HTML
+- SCSS 
+- JS 
+- GULP
+- RWD
