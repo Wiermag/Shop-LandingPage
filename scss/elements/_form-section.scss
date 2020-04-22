@@ -91,6 +91,7 @@
       cursor: pointer;
       border: none;
       border-radius: 4rem;
+      -webkit-appearance: button;
 
       &:after {
         content: '';
