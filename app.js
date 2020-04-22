@@ -24,7 +24,7 @@ const sum = document.getElementById('sum');
 
 const totalPrice = () => { 
     let result = sumProducts + sumOrders + sumPackage + sumAccounting + sumRental;
-    sum.innerText = result + '$' ;
+    sum.innerText = 'Total: ' + result + '$' ;
 }   
 
 productsInput.addEventListener('input', function () {
