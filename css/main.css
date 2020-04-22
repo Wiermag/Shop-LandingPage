@@ -80,7 +80,7 @@ body .site-container {
 @media (min-width: 1352px) {
   /* line 17, scss/settings/_basic.scss */
   body .site-container {
-    max-width: 1352px;
+    min-width: 1352px;
     margin: 0 auto;
     border: .1rem solid #dddddd;
   }
@@ -207,7 +207,7 @@ body .site-container {
   .header {
     position: fixed;
     display: flex;
-    width: 84vw;
+    width: 100%;
   }
   /* line 92, scss/elements/_header.scss */
   .header .hamburger-container {
@@ -220,11 +220,11 @@ body .site-container {
     bottom: 30%;
     left: 70%;
   }
-  /* line 100, scss/elements/_header.scss */
+  /* line 101, scss/elements/_header.scss */
   .header .header-menu .header-menu-list {
     display: flex;
   }
-  /* line 103, scss/elements/_header.scss */
+  /* line 104, scss/elements/_header.scss */
   .header .header-menu .header-menu-list li:hover:after {
     content: '';
     display: block;
@@ -284,7 +284,7 @@ body .site-container {
   background-image: url("../assets/Background.png");
   background-size: cover;
   background-position: center;
-  height: 45vh;
+  height: 60vh;
   width: 100%;
 }
 
@@ -516,11 +516,7 @@ body .site-container {
     align-items: center;
     justify-content: space-between;
   }
-  /* line 88, scss/elements/_second-section.scss */
-  .second-article-box {
-    width: 40vw;
-  }
-  /* line 90, scss/elements/_second-section.scss */
+  /* line 89, scss/elements/_second-section.scss */
   .second-article-box:last-of-type {
     background-color: transparent;
     display: flex;
@@ -528,14 +524,14 @@ body .site-container {
     width: 90vw;
     height: 100vh;
   }
-  /* line 96, scss/elements/_second-section.scss */
+  /* line 95, scss/elements/_second-section.scss */
   .second-article-box:last-of-type .box-text {
     background-color: white;
     width: 55%;
     height: 100%;
     border-radius: .6rem;
   }
-  /* line 102, scss/elements/_second-section.scss */
+  /* line 101, scss/elements/_second-section.scss */
   .second-article-box:last-of-type #megaphone {
     width: 40%;
     height: 100%;
@@ -543,11 +539,11 @@ body .site-container {
 }
 
 @media (min-width: 1000px) {
-  /* line 111, scss/elements/_second-section.scss */
+  /* line 110, scss/elements/_second-section.scss */
   .second-article {
     padding: 5rem;
   }
-  /* line 113, scss/elements/_second-section.scss */
+  /* line 112, scss/elements/_second-section.scss */
   .second-article-box {
     margin: 5rem;
     display: flex;
@@ -556,49 +552,49 @@ body .site-container {
     justify-content: space-around;
     height: 40vh;
   }
-  /* line 120, scss/elements/_second-section.scss */
+  /* line 119, scss/elements/_second-section.scss */
   .second-article-box .box-text {
     width: 50%;
     padding: 2rem;
   }
-  /* line 123, scss/elements/_second-section.scss */
+  /* line 122, scss/elements/_second-section.scss */
   .second-article-box .box-text .box-line {
     height: .4rem;
     width: 70%;
     background-color: #FB3B64;
     margin: 2rem;
   }
-  /* line 130, scss/elements/_second-section.scss */
+  /* line 129, scss/elements/_second-section.scss */
   .second-article-box:first-of-type {
     flex-direction: row-reverse;
     padding: 2rem;
   }
-  /* line 133, scss/elements/_second-section.scss */
+  /* line 132, scss/elements/_second-section.scss */
   .second-article-box:first-of-type .box-img-computer {
     margin-top: 2rem;
   }
-  /* line 138, scss/elements/_second-section.scss */
+  /* line 137, scss/elements/_second-section.scss */
   .second-article-box:nth-of-type(2) .box-line {
     background-color: #08A6E4;
   }
-  /* line 142, scss/elements/_second-section.scss */
+  /* line 141, scss/elements/_second-section.scss */
   .second-article-box:last-of-type {
     background-color: transparent;
     justify-content: space-between;
     align-items: stretch;
   }
-  /* line 147, scss/elements/_second-section.scss */
+  /* line 146, scss/elements/_second-section.scss */
   .second-article-box:last-of-type .box-text {
     background-color: white;
     width: 55%;
     border-radius: .6rem;
     padding: 2rem;
   }
-  /* line 152, scss/elements/_second-section.scss */
+  /* line 151, scss/elements/_second-section.scss */
   .second-article-box:last-of-type .box-text .box-line {
     background-color: #55DFB4;
   }
-  /* line 157, scss/elements/_second-section.scss */
+  /* line 156, scss/elements/_second-section.scss */
   .second-article-box:last-of-type #megaphone {
     width: 40%;
     height: 100%;

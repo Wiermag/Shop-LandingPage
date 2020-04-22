@@ -15,7 +15,7 @@ body {
   }
   @media (min-width: 1352px) {
   .site-container {
-    max-width: 1352px;
+    min-width: 1352px;
     margin: 0 auto;
     border: .1rem solid #dddddd;
   }
